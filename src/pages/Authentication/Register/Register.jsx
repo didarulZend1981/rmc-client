@@ -7,7 +7,9 @@ import { RiLockPasswordFill } from "react-icons/ri";
 import { useState } from "react";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
+
 const Register = () => {
+ 
   const [showPassword,setShowPassword]=useState(false);
   return (
     <div>
