@@ -1,7 +1,9 @@
 import { MdMarkEmailUnread } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import useAuthHook from "../../../providers/useAuthHook";
+import toast from "react-hot-toast";
 
 
 
@@ -9,7 +11,37 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 
 
 const Login = () => {
-    
+    const {signIn,setLoading} = useAuthHook();
+
+    const location = useLocation();
+    const navigate = useNavigate();
+    const handleLogin = e => {
+        e.preventDefault();
+        
+        // console.log(e.currentTarget);
+        const form = new FormData(e.currentTarget);
+        const email = form.get('email');
+        const password = form.get('password');
+    // console.log(email,password);
+    signIn(email, password)
+    .then(result => {
+        console.log("login tyme",result.user.displayName);
+        setLoading(false);
+        navigate(location?.state?location.state:'/');
+        
+        toast.success("Signin Successful")
+    })
+    .catch(error => {
+        toast.error('your email and password should match with the registered email and password If it doesnt match')
+            
+    })
+
+
+
+
+
+
+  }
   return (
     <div>
            <div className="hero min-h-screen bg-base-200">
@@ -20,7 +52,7 @@ const Login = () => {
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
                         <h1 className="text-3xl text-center font-bold">Login</h1>
-                        <form >
+                        <form onSubmit={handleLogin}>
                         
          <label className="input input-bordered flex items-center gap-2 mb-4">
          <MdMarkEmailUnread />
