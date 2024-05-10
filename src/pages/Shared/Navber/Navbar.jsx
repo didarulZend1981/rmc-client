@@ -1,13 +1,29 @@
 import { Link } from "react-router-dom";
+import useAuthHook from "../../../providers/useAuthHook";
 
 
 const Navbar = () => {
+  const { user, logOut } = useAuthHook();
+  const handleLogOut = () => {
+    logOut()
+        .then(() => { })
+        .catch(error => console.log(error))
+}
   const navItems =<>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/allfood">allfood</Link></li>
         <li><Link to="/gallery">gallery</Link></li>
-        <li><Link to="/login">login</Link></li>
-        <li><Link to="/registration">registration</Link></li>
+       
+
+        {user?.email ? <>
+            
+            <li><button onClick={handleLogOut}>Log out</button></li>
+        </>
+            : <> 
+               <li><Link to="/login">login</Link></li>
+              <li><Link to="/registration">registration</Link></li> 
+              </>
+        }
         
 
        
@@ -38,9 +54,11 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
         <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+        {user && (
+          <>
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          <img alt={user?.displayName} src={user?.photoURL} />
         </div>
       </div>
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
@@ -51,8 +69,11 @@ const Navbar = () => {
           </a>
         </li>
         <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+        <li><button onClick={handleLogOut}>Log out</button></li>
       </ul>
+          </>
+        )}
+      
     </div>
         </div>
       </div>

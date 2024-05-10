@@ -29,12 +29,12 @@ const Register = () => {
         const result = await createUser(email, pass)
         // console.log(result)
         await updateUserProfile(name, photo)
-        setUser({ ...user, photoURL: photo, displayName: name })
-        setLoading(false);
-        
-        toast.success('Signup Successful')
-        navigate(from);
         // setUser({ ...user, photoURL: photo, displayName: name })
+        setLoading(false);
+        navigate(from);
+        toast.success('Signup Successful')
+        // navigate(from);
+        setUser({ ...user, photoURL: photo, displayName: name })
       } catch (err) {
         // console.log(pass);
         // console.log(err)
