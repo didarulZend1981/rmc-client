@@ -87,6 +87,8 @@ const AddFoodItem = () => {
             <option value={option.category_name}>{option.category_name}
 
             </option>))
+
+            
             }
 
 

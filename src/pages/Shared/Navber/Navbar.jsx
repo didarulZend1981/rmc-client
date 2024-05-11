@@ -70,7 +70,7 @@ const Navbar = () => {
       </div>
       <ul tabIndex={0} className="mt-3 z-[1] uppercase text-[12px] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
         
-        <li><a>My added food items</a></li>
+        <li><a><Link to="/myAddedFooditem">My added food items</Link></a></li>
         <li><a><Link to="/addFoodItem">Add a food item</Link></a></li>
         <li><a>My ordered food items</a></li>
         <li><button onClick={handleLogOut}>Log out</button></li>

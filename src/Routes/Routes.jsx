@@ -7,6 +7,8 @@ import Login from "../pages/Authentication/Login/Login";
 import Register from "../pages/Authentication/Register/Register";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import AddFoodItem from "../pages/AddFoodItem/AddFoodItem";
+import MyAddedFoodItem from "../pages/MyAddedFoodItem/MyAddedFoodItem";
+import EditFood from "../pages/EditFood/EditFood";
 
 
 const router = createBrowserRouter([
@@ -39,7 +41,19 @@ const router = createBrowserRouter([
         path:'/addFoodItem',
         element:<AddFoodItem></AddFoodItem>
       },
+      {
+        path:'/myAddedFooditem',
+        element:<MyAddedFoodItem></MyAddedFoodItem>
+      },
 
+      {
+        path: '/editfood/:id',
+        element:<EditFood></EditFood>
+        ,
+        
+      },
+
+     
 
 
     ]
