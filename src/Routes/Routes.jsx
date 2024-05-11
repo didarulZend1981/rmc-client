@@ -6,6 +6,7 @@ import Gallery from "../pages/Gallery/Gallery";
 import Login from "../pages/Authentication/Login/Login";
 import Register from "../pages/Authentication/Register/Register";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import AddFoodItem from "../pages/AddFoodItem/AddFoodItem";
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path:'/registration',
         element:<Register></Register>
+      },
+      {
+        path:'/addFoodItem',
+        element:<AddFoodItem></AddFoodItem>
       },
 
 
