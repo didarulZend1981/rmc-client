@@ -1,9 +1,10 @@
+import FoodAll from "../../components/FoodAll/FoodAll";
 
 
 const Allfood = () => {
   return (
     <div>
-          all food
+          <FoodAll></FoodAll>
     </div>
   );
 };

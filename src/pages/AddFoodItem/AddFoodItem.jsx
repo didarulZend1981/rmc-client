@@ -2,8 +2,12 @@ import { useEffect, useState } from "react";
 
 import Swal from "sweetalert2";
 import useAuthHook from "../../providers/useAuthHook";
+import { useLocation, useNavigate } from "react-router-dom";
+
 const AddFoodItem = () => {
   const {user} = useAuthHook()|| {};
+  const location = useLocation();
+    const navigate = useNavigate();
 
   const [category,setCategory] =useState([]);
   useEffect(()=>{
@@ -43,6 +47,7 @@ const AddFoodItem = () => {
             icon: 'success',
             confirmButtonText: 'ADD'
         })
+        navigate(location?.state?location.state:'/myAddedFooditem');
       }
     })
 

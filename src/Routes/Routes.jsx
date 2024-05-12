@@ -9,6 +9,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import AddFoodItem from "../pages/AddFoodItem/AddFoodItem";
 import MyAddedFoodItem from "../pages/MyAddedFoodItem/MyAddedFoodItem";
 import EditFood from "../pages/EditFood/EditFood";
+import SinglePage from "../pages/SinglePage/SinglePage";
 
 
 const router = createBrowserRouter([
@@ -49,6 +50,12 @@ const router = createBrowserRouter([
       {
         path: '/editfood/:id',
         element:<EditFood></EditFood>
+        ,
+        
+      },
+      {
+        path: '/single/:id',
+        element:<SinglePage></SinglePage>
         ,
         
       },
