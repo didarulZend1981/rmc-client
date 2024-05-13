@@ -70,6 +70,7 @@ const router = createBrowserRouter([
         path:'/purchase',
         element:<Purchase></Purchase>
       },
+      
 
      
 

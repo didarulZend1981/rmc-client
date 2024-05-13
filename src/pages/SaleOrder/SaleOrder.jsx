@@ -39,7 +39,9 @@ const SaleOrder = () => {
          quantiPrice: quantiPrice,
          Food_Name_id: _id,
          owner_email: email,
-         owner_name: name
+         owner_name: name,
+         sellingCount: 1,
+
         
         
        
@@ -67,6 +69,8 @@ const SaleOrder = () => {
                   confirmButtonText: 'ADD'
               })
 
+        
+
         fetch(`http://localhost:5000/foodupdate/${_id}`, {
           method: 'PATCH',
           headers: {
@@ -79,6 +83,10 @@ const SaleOrder = () => {
               console.log(data);
               
           })
+
+
+
+  
 
 
 
