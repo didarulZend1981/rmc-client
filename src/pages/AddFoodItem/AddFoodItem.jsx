@@ -22,8 +22,8 @@ const AddFoodItem = () => {
     const Food_Name = e.target.Food_Name.value;
     const Food_Image = e.target.Food_Image.value;
     const Food_Category = e.target.Food_Category.value;
-    const quantity = e.target.quantity.value;
-    const price = e.target.price.value;
+    const quantity = parseFloat(e.target.quantity.value);
+    const price = parseFloat(e.target.price.value);
     const Food_Origin = e.target.Food_Origin.value;
     const description = e.target.description.value;
     const email = user.email;

@@ -37,7 +37,7 @@ const SinglePage = () => {
     <p>Made By:{name}</p>
                                
 
-                                 {user?.email ? <>{user.email}</>: <>{email} </>}
+    {email}
                                 <p></p>
                                 <p>Food Origin:{Food_Origin}</p>
                                

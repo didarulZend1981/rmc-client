@@ -11,6 +11,7 @@ const FoodAll = () => {
     .then(data=>setAllFood(data));
   },[])
 
+  console.log(allFood);
 
   return (
     <div>
