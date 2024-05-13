@@ -10,6 +10,8 @@ import AddFoodItem from "../pages/AddFoodItem/AddFoodItem";
 import MyAddedFoodItem from "../pages/MyAddedFoodItem/MyAddedFoodItem";
 import EditFood from "../pages/EditFood/EditFood";
 import SinglePage from "../pages/SinglePage/SinglePage";
+import SaleOrder from "../pages/SaleOrder/SaleOrder";
+import Purchase from "../pages/Purchase/Purchase";
 
 
 const router = createBrowserRouter([
@@ -49,15 +51,24 @@ const router = createBrowserRouter([
 
       {
         path: '/editfood/:id',
-        element:<EditFood></EditFood>
-        ,
+        element:<EditFood></EditFood>,
         
       },
       {
         path: '/single/:id',
-        element:<SinglePage></SinglePage>
-        ,
+        element:<SinglePage></SinglePage>,
         
+      },
+
+      {
+        path: '/order/:id',
+        element:<SaleOrder></SaleOrder>,
+        loader: ({params}) => fetch(`http://localhost:5000/foodOrder/${params.id}`)
+      },
+
+      {
+        path:'/purchase',
+        element:<Purchase></Purchase>
       },
 
      

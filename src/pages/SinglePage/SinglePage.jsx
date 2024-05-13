@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useAuthHook from "../../providers/useAuthHook";
 
 
@@ -18,7 +18,11 @@ const SinglePage = () => {
           })
   },[id])
 
-
+  const purchas =<>
+      <Link to={`../order/${_id}`}>
+          purchas
+      </Link>
+  </>
 
   return (
     <div>
@@ -49,10 +53,10 @@ const SinglePage = () => {
 
             
 {email===user.email ? (
-  <button className="btn btn-outline btn-success" disabled>Purchase</button>
+  <button className="btn btn-outline btn-success" disabled>{purchas}</button>
   ) 
 : (
-    <button className="btn btn-outline btn-success">Purchase</button>
+    <button className="btn btn-outline btn-success">{purchas}</button>
   )
 
 } 
@@ -62,7 +66,7 @@ const SinglePage = () => {
 
 
 : <> 
-      <button className="btn btn-outline btn-success">Purchase</button>
+      <button className="btn btn-outline btn-success">{purchas}</button>
   </>
 }
                               
