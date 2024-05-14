@@ -12,7 +12,7 @@ const MyAddedFoodItem = () => {
     const [foodEmail, setFoodEmail] = useState([]);
     
     console.log(foodEmail);
-    const url = `http://localhost:5000/foodEmail?email=${user?.email}`;
+    const url = `https://restaurant-management-server-roan.vercel.app/foodEmail?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -33,7 +33,7 @@ const MyAddedFoodItem = () => {
               if (result.isConfirmed) {
                 // 662e5da6c57feb2582fa99dc
                 
-                  fetch(`http://localhost:5000/food/${_id}`, {
+                  fetch(`https://restaurant-management-server-roan.vercel.app/food/${_id}`, {
                       method: 'DELETE'
                   })
                       .then(res => res.json())

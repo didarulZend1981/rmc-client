@@ -50,7 +50,7 @@ const SaleOrder = () => {
 
       // console.log(foodOrder);
 
-          fetch('http://localhost:5000/foodOrder', {
+          fetch('https://restaurant-management-server-roan.vercel.app/foodOrder', {
               method: 'POST', 
               headers: {
                   'content-type': 'application/json'
@@ -71,7 +71,7 @@ const SaleOrder = () => {
 
         
 
-        fetch(`http://localhost:5000/foodupdate/${_id}`, {
+        fetch(`https://restaurant-management-server-roan.vercel.app/foodupdate/${_id}`, {
           method: 'PATCH',
           headers: {
               'content-type': 'application/json'

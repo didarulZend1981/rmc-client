@@ -63,7 +63,7 @@ const router = createBrowserRouter([
       {
         path: '/order/:id',
         element:<SaleOrder></SaleOrder>,
-        loader: ({params}) => fetch(`http://localhost:5000/foodOrder/${params.id}`)
+        loader: ({params}) => fetch(`https://restaurant-management-server-roan.vercel.app/foodOrder/${params.id}`)
       },
 
       {

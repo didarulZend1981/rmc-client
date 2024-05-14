@@ -1,36 +1,37 @@
 import { useEffect, useState } from "react";
 import Banner from "./Banner";
+import { Link } from "react-router-dom";
+import useAuthHook from "../../providers/useAuthHook";
+
+import ImageGallery from "./ImageGallery";
+import AddImage from "./AddImage";
+
 
 
 
 const Gallery = () => {
-  const [images, setImages] = useState([]);
-
- 
-  useEffect(()=>{
-    fetch('http://localhost:5000/gallery')
-    .then(res=>res.json())
-    .then(data=>setImages(data))
-    .catch(error => console.error('Error fetching images:', error));
-  },[])
   
+  
+
+
+
+  
+
+
+
+
+
+
+
   return (
     <>
     
-    <Banner></Banner>
+      <Banner></Banner>
 
-      <div className="gallery-container">
-      {images.map(image => (
-        <div key={image.id} className="gallery-item">
-          <img src={image.imageUrl} alt="User Image" className="w-[200px] h-[200px]" />
-          <div className="overlay">
-            <span className="user-name">{image.userName}</span>
-            <span className="feedback">{image.feedback}</span>
-          </div>
-        </div>
-      ))}
-    </div>
-    
+      <ImageGallery></ImageGallery>
+
+      <AddImage></AddImage>
+      
     </>
     
   );

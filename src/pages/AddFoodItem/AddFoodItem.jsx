@@ -11,7 +11,7 @@ const AddFoodItem = () => {
 
   const [category,setCategory] =useState([]);
   useEffect(()=>{
-    fetch('http://localhost:5000/category')
+    fetch('https://restaurant-management-server-roan.vercel.app/category')
     .then(res=>res.json())
     .then(data=>setCategory(data));
   },[])
@@ -33,7 +33,7 @@ const AddFoodItem = () => {
     const info = { Food_Name,Food_Image,Food_Category,quantity,price,Food_Origin,description,email,name};
     
    console.log(info)
-   fetch("http://localhost:5000/addFood", {
+   fetch("https://restaurant-management-server-roan.vercel.app/addFood", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body:JSON.stringify(info)

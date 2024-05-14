@@ -31,7 +31,7 @@ const ErrorPage = () => {
         <div className='relative w-full mt-8 lg:w-1/2 lg:mt-0'>
           <img
             className=' w-full lg:h-[32rem] h-80 md:h-96 rounded-lg object-cover '
-            src='https://unsplash.com/photos/vegetable-and-meat-on-bowl-kcA-c3f_3FE'
+            src='https://i.ibb.co/Z1H2WFj/dan-cristian-padure-no-OXRT9gf-Q8-unsplash.jpg'
             alt=''
           />
         </div>

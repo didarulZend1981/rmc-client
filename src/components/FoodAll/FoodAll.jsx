@@ -6,7 +6,7 @@ const FoodAll = () => {
 
   const [allFood,setAllFood] =useState([]);
   useEffect(()=>{
-    fetch('http://localhost:5000/food')
+    fetch('https://restaurant-management-server-roan.vercel.app/food')
     .then(res=>res.json())
     .then(data=>setAllFood(data));
   },[])

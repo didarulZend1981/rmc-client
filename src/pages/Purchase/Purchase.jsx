@@ -10,7 +10,7 @@ const Purchase = () => {
 
   const { user } = useAuthHook();
     // console.log(order);
-    const url = `http://localhost:5000/foodOrderPurchase?email=${user?.email}`;
+    const url = `https://restaurant-management-server-roan.vercel.app/foodOrderPurchase?email=${user?.email}`;
     useEffect(() => {
         axios.get(url, {withCredentials: true})
         .then(res => {
@@ -32,7 +32,7 @@ const Purchase = () => {
 
         
 
-          fetch(`http://localhost:5000/foodPurchas/${id}`, {
+          fetch(`https://restaurant-management-server-roan.vercel.app/foodPurchas/${id}`, {
               method: 'DELETE'
           })
               .then(res => res.json())

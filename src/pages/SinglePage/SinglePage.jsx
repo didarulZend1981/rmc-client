@@ -10,7 +10,7 @@ const SinglePage = () => {
   const {user} = useAuthHook() || {};
   const {_id,Food_Name,Food_Image,Food_Category,quantity,price,Food_Origin,email,name,description} = product;
   useEffect(()=>{
-          fetch(`http://localhost:5000/food/${id}`)
+          fetch(`https://restaurant-management-server-roan.vercel.app/food/${id}`)
           .then(res=>res.json())
           .then(data=>{
             setProduct(data)
