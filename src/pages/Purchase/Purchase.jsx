@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import useAuthHook from "../../providers/useAuthHook";
 import PurchaseRow from "./PurchaseRow";
 import Swal from "sweetalert2";
-
+import axios from "axios";
 const Purchase = () => {
 
   const [order, setOrder] = useState([]);
@@ -12,9 +12,10 @@ const Purchase = () => {
     // console.log(order);
     const url = `http://localhost:5000/foodOrderPurchase?email=${user?.email}`;
     useEffect(() => {
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setOrder(data))
+        axios.get(url, {withCredentials: true})
+        .then(res => {
+            setOrder(res.data);
+        })
     }, [url]);
 
     const handleDelete = id => {

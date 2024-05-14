@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Banner from "./Banner";
 
 
 
@@ -14,7 +15,11 @@ const Gallery = () => {
   },[])
   
   return (
-    <div className="gallery-container">
+    <>
+    
+    <Banner></Banner>
+
+      <div className="gallery-container">
       {images.map(image => (
         <div key={image.id} className="gallery-item">
           <img src={image.imageUrl} alt="User Image" className="w-[200px] h-[200px]" />
@@ -25,6 +30,9 @@ const Gallery = () => {
         </div>
       ))}
     </div>
+    
+    </>
+    
   );
 };
 

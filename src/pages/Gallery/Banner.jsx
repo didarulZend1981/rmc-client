@@ -1,35 +1,25 @@
-import { useEffect, useState } from "react";
-import FoodAll from "../../components/FoodAll/FoodAll";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-
-
-const Allfood = () => {
- 
-
+const Banner = () => {
   return (
     <div>
-      
-
-      
-
-
           <div className="hero h-[400px] bg-base-200">
                 <div className="hero-content text-center">
                       <div className="max-w-md">
                             <div className="text-sm breadcrumbs">
                                   <ul>
-                                        <li><a>Home</a></li> 
-                                        <li><a>All FOOD</a></li> 
+                                       
+                                       <li><Link to="/"><a>Home</a></Link></li> 
+                                        <li><a>Gallary</a></li> 
 
                                   </ul>
                             </div>
                       </div>
                 </div>
           </div>
-         
-          <FoodAll></FoodAll>
     </div>
   );
 };
 
-export default Allfood;
+export default Banner;

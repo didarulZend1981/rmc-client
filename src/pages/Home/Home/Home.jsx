@@ -1,3 +1,4 @@
+import FoodAll from "../../../components/FoodAll/FoodAll";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 
@@ -7,7 +8,7 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <Category></Category>
-      <h2>this is home</h2>
+      <FoodAll></FoodAll>
     </div>
   );
 };
