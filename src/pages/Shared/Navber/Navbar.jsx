@@ -62,7 +62,7 @@ const Navbar = () => {
           <div tabIndex={0} role="button" className="btn ">
         <div className="w-50 justify-between">
         <a className="flex w-50 gap-4">
-            <span className="w-40">{user?.displayName}</span>
+            <span className="w-40">My Profile - {user?.displayName}</span>
             <img alt={user?.displayName} src={user?.photoURL} className="w-6 rounded-lg" />
           </a>
          
