@@ -15,7 +15,7 @@ const ImageGallery = () => {
 
   return (
     <div>
-          <div className="gallery-container">
+          <div className="gallery-container mt-20 mb-20">
       {images.map(image => (
         <div key={image.id} className="gallery-item">
           <img src={image.imageUrl} alt="User Image" className="w-[200px] h-[200px]" />

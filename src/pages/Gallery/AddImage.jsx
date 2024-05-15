@@ -31,7 +31,7 @@ const AddImage = () => {
             icon: 'success',
             confirmButtonText: 'ADD'
         })
-       
+        navigate(location?.state?location.state:'/gallery');
       }
     })
 
@@ -44,7 +44,7 @@ const AddImage = () => {
 
   return (
     <div>
-       <button className="btn" onClick={()=>document.getElementById('my_modal_5').showModal()}>open modal</button>
+       <button className="btn text-center border-2 btn-primary" onClick={()=>document.getElementById('my_modal_5').showModal()}>Photo ADD</button>
 <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
   <div className="modal-box">
 

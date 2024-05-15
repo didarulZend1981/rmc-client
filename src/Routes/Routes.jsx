@@ -12,6 +12,7 @@ import EditFood from "../pages/EditFood/EditFood";
 import SinglePage from "../pages/SinglePage/SinglePage";
 import SaleOrder from "../pages/SaleOrder/SaleOrder";
 import Purchase from "../pages/Purchase/Purchase";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -62,13 +63,17 @@ const router = createBrowserRouter([
 
       {
         path: '/order/:id',
-        element:<SaleOrder></SaleOrder>,
+        element:<PrivateRoute><SaleOrder></SaleOrder></PrivateRoute>
+        ,
         loader: ({params}) => fetch(`https://restaurant-management-server-roan.vercel.app/foodOrder/${params.id}`)
       },
 
       {
         path:'/purchase',
-        element:<Purchase></Purchase>
+        element:<PrivateRoute>
+              <Purchase></Purchase>
+        </PrivateRoute>
+        
       },
       
 

@@ -48,6 +48,8 @@ const MyAddedFoodItem = () => {
                             const remaining = foodEmail.filter(cof => cof._id !== _id);
                             setFoodEmail(remaining);
                         }
+
+                        navigate(location?.state?location.state:'/myAddedFooditem');
                           
                       })
       
@@ -58,62 +60,69 @@ const MyAddedFoodItem = () => {
 
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content flex-col lg:flex-row">
-                
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <div className="card-body">
-
-                        <table className="table">
-
-
-                        <thead>
-                            <tr>
-                                <th>SL</th>
-
-                                <th>Name{foodEmail.length}</th>
-                                <th>Price</th>
-                                <th>Stock</th>
-                                <th>Action</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                        {foodEmail.map((p, index) => (
-           <tr key={index}>
-             <td>{index+1}</td>
-             <td>{p.Food_Name}</td>
-             <td>{p.price}</td>
-           
-             <td>
-             <img src={p.Food_Image}/>
-             </td>
-             
-             <td>
-             <Link to={`/editfood/${p._id}`} className="text-blue-500 hover:text-blue-700">
-             <GrUpdate />
-         </Link>
-
-        
-
-         <button
-                    onClick={() => handleDelete(p._id)}
-                    className="btn btn-primary bg-orange-500"><MdDeleteForever className="text-[30px] whitespace-pre hover:bg-yellow-600" />
-                </button>
-             </td>
-             
-           </tr>
-         ))}
-
-                        </tbody>
-                        </table>
-
-                    </div>
+        <div className="hero h-[400px] bg-base-200" style={{backgroundImage: 'url(https://i.ibb.co/VqF7VHj/Untitled-design-4.png)'}}>
+                <div className="hero-content text-center">
+                      <div className="max-w-md">
+                      <div className="breadcrumbs text-3xl font-extralight text-white">
+                                  <ul>
+                                        <li className="text-5xl"><a>Home</a></li> 
+                                        <li><a>All Product </a></li> 
+                                        
+                                  </ul>
+                            </div>
+                      </div>
                 </div>
-                      
-                
+          </div>
+     <div className="overflow-x-auto w-full">
+                <table className="table w-full mt-20 border-2 rounded-lg">
 
-            </div>
+
+<thead>
+    <tr className="text-[24px]">
+        <th>SL</th>
+
+        <th>Name{foodEmail.length}</th>
+        <th>Price</th>
+        <th>Stock</th>
+       
+        <th>Image</th>
+        <th>Action</th>
+
+    </tr>
+</thead>
+<tbody>
+{foodEmail.map((p, index) => (
+<tr key={index}>
+<td>{index+1}</td>
+<td>{p.Food_Name}</td>
+<td>{p.price}</td>
+<td>{p.quantity}</td>
+
+<td>
+<img src={p.Food_Image} className="w-[100px] h-[100px] rounded-xl"/>
+</td>
+
+<td>
+<button className="btn btn-secondary mr-10">
+<Link to={`/editfood/${p._id}`} className="text-blue-500 hover:text-blue-700">
+<GrUpdate  className="text-[30px] whitespace-pre hover:bg-yellow-600"/>
+</Link>
+</button>
+
+
+
+
+<button
+onClick={() => handleDelete(p._id)}
+className="btn btn-primary bg-orange-500"><MdDeleteForever className="text-[30px] whitespace-pre hover:bg-yellow-600" />
+</button>
+</td>
+
+</tr>
+))}
+
+</tbody>
+</table>
         </div>
     </div>
   );

@@ -26,7 +26,12 @@ const Allfood = () => {
                       </div>
                 </div>
           </div>
-         
+         <div>
+         <div className="text-center mt-20 mb-20">
+          <h3 className="text-3xl text-orange-700 font-bold">All Product SHOW</h3>
+          <h2 className="text-5xl">List of favoured foods..</h2>
+          </div>
+         </div>
           <FoodAll></FoodAll>
     </div>
   );

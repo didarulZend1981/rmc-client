@@ -48,7 +48,7 @@ const EditFood = () => {
                   
               })
            
-
+              navigate(location?.state?location.state:'/myAddedFooditem');
 
           }
       })
@@ -144,7 +144,7 @@ const EditFood = () => {
           
          
                             <div className="form-control mt-6">
-                                <input className="btn btn-primary" type="submit" value="Add Item" />
+                                <input className="btn btn-primary" type="submit" value="Edit Item" />
                             </div>
                         </form>
                        

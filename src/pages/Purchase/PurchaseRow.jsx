@@ -4,6 +4,7 @@ const PurchaseRow = ({ booking,handleDelete}) => {
    const { _id, date, Food_Name, Food_Image, quantity,price,quantiPrice,owner_name } = booking;
   console.log(booking);
   return (
+    
    <tr>
         <th>
                 <button onClick={() => handleDelete(_id)} className="btn btn-sm btn-circle">

@@ -15,7 +15,9 @@ const Register = () => {
   const {createUser,user,setUser,updateUserProfile,setLoading} = useAuthHook();
       const navigate = useNavigate();
       const location = useLocation();
-      const from = location?.state || "/";
+      const from = navigate(location?.state?location.state:'/login');
+      // const from = location?.state || "/";
+      
   const handleRegis = async e => {
     e.preventDefault()
     const form = e.target

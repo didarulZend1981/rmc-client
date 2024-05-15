@@ -95,7 +95,7 @@ const SaleOrder = () => {
 
 
 
-              navigate(location?.state?location.state:'/allfood');
+              navigate(location?.state?location.state:'/purchase');
               }
           })
 
@@ -108,8 +108,21 @@ const SaleOrder = () => {
 
   return (
     <div>
-      <h2 className='text-center text-3xl'>Food Order: { Food_Name} </h2>
-      <form onSubmit={handleFoodOrder}>
+        <div className="hero h-[400px] bg-base-200" style={{backgroundImage: 'url(https://i.ibb.co/VqF7VHj/Untitled-design-4.png)'}}>
+                <div className="hero-content text-center">
+                      <div className="max-w-md">
+                      <div className="breadcrumbs text-3xl font-extralight text-white">
+                                  <ul>
+                                        <li className="text-5xl"><a>Home</a></li> 
+                                        <li><a>Sale </a></li> 
+                                        
+                                  </ul>
+                            </div>
+                      </div>
+                </div>
+          </div>
+      <h2 className='text-center text-3xl mt-20 mb-20'>Food Order: { Food_Name} </h2>
+      <form onSubmit={handleFoodOrder} className="border-2 p-10 mb-20 rounded-lg">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
      
             <div className="form-control">

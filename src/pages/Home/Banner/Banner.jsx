@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import img6 from '../../../assets/banner/6.jpg';
 
 const Banner = () => {
@@ -10,12 +11,11 @@ const Banner = () => {
 
             <div className="absolute rounded-lg flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
             <div className='text-white space-y-7 pl-12 w-1/2'>
-            <h2 className="text-6xl font-blod">Affordable Price For Car Serviceing</h2>
-            <p>There are many variation of passges of available, but the majority have suffered alteration in some form</p>
+            <h2 className="text-3xl font-blod">Popular Food</h2>
+            <p>This product is one of the products that have become popular in a very short time. We live among you by presenting new quality products every time. ...</p>
             <div>
-            <button className="btn btn-primary mr-5">Discover More</button>
-            <button className="btn btn-outline btn-secondary">latest Project</button>
-            </div>
+            <button className="btn btn-primary mr-5"><Link to="/allfood">More</Link></button>
+             </div>
             </div>
 
 

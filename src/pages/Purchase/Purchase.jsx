@@ -55,13 +55,27 @@ const Purchase = () => {
 
   return (
     <div>
-      <h2 className="text-5xl">Your bookings:{order.length}</h2>
-            <div className="overflow-x-auto w-full">
-                <table className="table w-full">
+        <div className="hero h-[400px] bg-base-200" style={{backgroundImage: 'url(https://i.ibb.co/VqF7VHj/Untitled-design-4.png)'}}>
+                <div className="hero-content text-center">
+                      <div className="max-w-md">
+                      <div className="breadcrumbs text-3xl font-extralight text-white">
+                                  <ul>
+                                        <li className="text-5xl"><a>Home</a></li> 
+                                        <li><a>Purchase</a></li> 
+                                        
+                                  </ul>
+                            </div>
+                      </div>
+                </div>
+          </div>
+
+      <h2 className="text-5xl mt-20 mb-20 text-center">Your bookings:{order.length}</h2>
+            <div className="overflow-x-auto w-full mb-20">
+                <table className="table w-full border-2">
                     {/* head */}
                     <thead>
-                        <tr>
-                            
+                        <tr className="uppercase">
+                            <th>X</th>
                             <th>food img</th>
                             <th>Food Name</th>
                             <th>Quintity</th>

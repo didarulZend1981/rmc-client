@@ -10,9 +10,9 @@ const Navbar = () => {
         .catch(error => console.log(error))
 }
   const navItems =<>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/allfood">allfood</Link></li>
-        <li><Link to="/gallery">gallery</Link></li>
+        <li className="uppercase"><Link to="/">Home</Link></li>
+        <li className="uppercase"><Link to="/allfood">allfood</Link></li>
+        <li className="uppercase"><Link to="/gallery">gallery</Link></li>
        
 
         {user?.email ? <>
@@ -23,8 +23,8 @@ const Navbar = () => {
             <li><button onClick={handleLogOut}>Log out</button></li>
         </>
             : <> 
-               <li><Link to="/login">login</Link></li>
-              <li><Link to="/registration">registration</Link></li> 
+               <li className="uppercase"><Link to="/login">login</Link></li>
+              <li className="uppercase"><Link to="/registration">registration</Link></li> 
               </>
         }
         
@@ -51,7 +51,7 @@ const Navbar = () => {
           <a className="btn btn-ghost text-xl"><img alt="RMC" src="https://i.ibb.co/M27BnxJ/log.png" /></a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 ">
           {navItems}
           </ul>
         </div>
@@ -70,10 +70,10 @@ const Navbar = () => {
       </div>
       <ul tabIndex={0} className="mt-3 z-[1] uppercase text-[12px] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
         
-        <li><a><Link to="/myAddedFooditem">My added food items</Link></a></li>
-        <li><a><Link to="/addFoodItem">Add a food item</Link></a></li>
-        <li><a><Link to="/purchase">My ordered food items</Link></a></li>
-        <li><button onClick={handleLogOut}>Log out</button></li>
+        <li className="uppercase"><a><Link to="/myAddedFooditem">My added food items</Link></a></li>
+        <li className="uppercase"><a><Link to="/addFoodItem">Add a food item</Link></a></li>
+        <li className="uppercase"><a><Link to="/purchase">My ordered food items</Link></a></li>
+        <li className="uppercase"><button onClick={handleLogOut}>Log out</button></li>
       </ul>
           </>
         :
