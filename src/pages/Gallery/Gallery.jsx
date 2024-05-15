@@ -31,6 +31,7 @@ const Gallery = () => {
       <ImageGallery></ImageGallery>
 
       <AddImage></AddImage>
+     
       
     </>
     

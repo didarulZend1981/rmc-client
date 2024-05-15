@@ -52,7 +52,7 @@ const SaleOrder = () => {
 
 
 
-    console.log(food);
+    // console.log(food);
    
     const handleFoodOrder = event =>{
       event.preventDefault();

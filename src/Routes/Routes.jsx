@@ -13,6 +13,7 @@ import SinglePage from "../pages/SinglePage/SinglePage";
 import SaleOrder from "../pages/SaleOrder/SaleOrder";
 import Purchase from "../pages/Purchase/Purchase";
 import PrivateRoute from "./PrivateRoute";
+import AddImage from "../pages/Gallery/AddImage";
 
 
 const router = createBrowserRouter([
@@ -31,8 +32,9 @@ const router = createBrowserRouter([
       },
       {
         path:'/gallery',
-        element:<Gallery></Gallery>
+        element:<PrivateRoute><Gallery></Gallery></PrivateRoute>
       },
+      
       {
         path:'/login',
         element:<Login></Login>

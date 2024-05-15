@@ -29,6 +29,7 @@ const TopCard = ({catCard}) => {
             <p>price:{price}</p>
             <p>quantity:{quantity}</p>
             <p>Category:{Food_Category}</p>
+            <p>Sell Count:{sellingCount}</p>
             <div className="card-actions justify-end">
                
 
