@@ -32,7 +32,7 @@ const Allfood = () => {
           <h2 className="text-5xl">List of favoured foods..</h2>
           </div>
          </div>
-          <FoodAll></FoodAll>
+                   <FoodAll></FoodAll>
     </div>
   );
 };

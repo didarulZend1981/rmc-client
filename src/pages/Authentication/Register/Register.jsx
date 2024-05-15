@@ -15,8 +15,8 @@ const Register = () => {
   const {createUser,user,setUser,updateUserProfile,setLoading} = useAuthHook();
       const navigate = useNavigate();
       const location = useLocation();
-      const from = navigate(location?.state?location.state:'/login');
-      // const from = location?.state || "/";
+      // const from = navigate(location?.state?location.state:'/login');
+      const from = location?.state || "/";
       
   const handleRegis = async e => {
     e.preventDefault()
@@ -35,7 +35,7 @@ const Register = () => {
         setLoading(false);
         navigate(from);
         toast.success('Signup Successful')
-        // navigate(from);
+        //  navigate(from);
         setUser({ ...user, photoURL: photo, displayName: name })
       } catch (err) {
         // console.log(pass);

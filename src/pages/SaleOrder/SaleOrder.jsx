@@ -1,13 +1,57 @@
 import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import useAuthHook from "../../providers/useAuthHook";
 import Swal from "sweetalert2";
+import { useEffect, useState } from "react";
 
 const SaleOrder = () => {
-  const food = useLoaderData();
-  const location = useLocation();
+    
+
+
+    const food = useLoaderData();
+    const location = useLocation();
     const navigate = useNavigate();
     const { _id,price,quantity,Food_Name,Food_Image,name,email} = food;
     const {user} = useAuthHook();
+//
+    const [currentDateTime, setCurrentDateTime] = useState(new Date());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentDateTime(new Date());
+        }, 1000); // Update every second
+
+        // Cleanup function to clear the interval when the component unmounts
+        return () => clearInterval(interval);
+    }, []); // Empty dependency array means this effect runs only once after the component mounts
+
+    
+    
+
+// quaintity check
+    const [quantityToBuy, setQuantityToBuy] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    console.log(errorMessage);
+    const handleQuantityChange = (event) => {
+        const inputQuantity = event.target.value;
+        if (!isNaN(inputQuantity) && inputQuantity <= quantity) {
+            setQuantityToBuy(inputQuantity);
+            setErrorMessage(inputQuantity);
+
+        } else {
+            
+            Swal.fire({
+                title: 'Sorry!',
+                text: 'Sorry you cant buy more than the available quantity.',
+                icon: 'success',
+                confirmButtonText: 'ADD'
+            })
+        }
+    };
+
+
+
+
+
     console.log(food);
    
     const handleFoodOrder = event =>{
@@ -15,7 +59,9 @@ const SaleOrder = () => {
     // console.log("didarul")
       const form = event.target;
       
-      const date = form.date.value;
+    //   const date = form.date.value;
+    const date = currentDateTime.toLocaleString();
+    
 // const quantity = form.quantity.value;
       const quantityF = parseFloat(form.quantity.value);
       const price = parseFloat(form.price.value);
@@ -131,13 +177,13 @@ const SaleOrder = () => {
                 </label>
                 <input type="text" defaultValue={user?.displayName} name="name" className="input input-bordered" />
             </div>
-
+{/* 
           <div className="form-control">
               <label className="label">
                   <span className="label-text">Date</span>
               </label>
               <input type="date" name="date" className="input input-bordered" />
-          </div>
+          </div> */}
 
           <div className="form-control">
                         <label className="label">
@@ -157,10 +203,25 @@ const SaleOrder = () => {
                         <label className="label">
                             <span className="label-text">Quantity</span>
                         </label>
-                       <input type="number" defaultValue={quantity}  className="input input-bordered" name="quantity"/>
-                    </div>
+                       <input 
+                       type="number" 
+                       defaultValue={quantity}  
+                       className="input input-bordered" 
+                       name="quantity"
 
+
+               
+                id="quantity" 
+                value={quantityToBuy} 
+                onChange={handleQuantityChange} 
+                min={1} 
+                max={quantity} 
+                placeholder={quantity}
+                    />
+                    </div>
                     
+
+                    {/* <p>{currentDateTime.toLocaleString()}</p> */}
 
                     <div className="form-control mt-6">
                     <input className="btn btn-primary btn-block" type="submit" value="Order Confirm" />
