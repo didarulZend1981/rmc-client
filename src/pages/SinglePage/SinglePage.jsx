@@ -24,6 +24,9 @@ const SinglePage = () => {
       </Link>
   </>
 
+
+
+
   return (
     <div>
      
@@ -34,8 +37,11 @@ const SinglePage = () => {
     <h2 className="card-title">Food Name:{Food_Name}</h2>
     <p>Food Category:{Food_Category}</p>
     <p>Price:{price}</p>
+    <p>quantity:{quantity == 0 ?"Not ableable":quantity}</p>
     <p>Made By:{name}</p>
                                
+    
+
 
     {email}
                                 <p></p>
@@ -47,27 +53,39 @@ const SinglePage = () => {
     <div className="card-actions justify-end">
                              
 
-                              {user?.email ? <>
+{user?.email ? <>
 
-            
+                          
 
-            
-{email===user.email ? (
-  <button className="btn btn-outline btn-success" disabled>{purchas}</button>
-  ) 
-: (
-    <button className="btn btn-outline btn-success">{purchas}</button>
-  )
+                          
+              {email===user.email ? (
+                <button className="btn btn-outline btn-success" disabled>{purchas}</button>
+                ) 
+              : (
+                <>
+                {quantity > 0 ? (
+                  <button className="btn btn-outline btn-success">{purchas}</button>
+                ) : (
+                  <button className="btn btn-outline btn-success" disabled>{purchas}</button>
+                )}
 
-} 
-</>
+                  </>
+                )
+
+              } 
+              </>
 
 
 
 
-: <> 
-      <button className="btn btn-outline btn-success">{purchas}</button>
-  </>
+            : <>
+                {quantity > 0 ? (
+                  <button className="btn btn-outline btn-success">{purchas}</button>
+                ) : (
+                  <button className="btn btn-outline btn-success" disabled>{purchas}</button>
+                )}
+
+              </>
 }
                               
           
