@@ -1,7 +1,7 @@
 <p>
 ## project overview
   <br/>
-When I first got the project, I was very afraid another problem photo GALLERY this project, then when I thought about coming, I finished the work using Node.js, MongoDB, and React.
+When I 2nd got the project, I was very afraid another problem photo GALLERY this project, then when I thought about coming, I finished the work using Node.js, MongoDB, and React.
 </p>
 <p>
 ## Features and Characteristics<br/>
