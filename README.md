@@ -22,5 +22,5 @@ When I first got the project, I was very afraid another problem photo GALLERY th
 </p>
 
 <p>
- #project live link: [rmcd-49ebe.web.app](https://rmcd-49ebe.web.app/)
+ #project live link: (https://rmcd-49ebe.web.app/)
 </p>
