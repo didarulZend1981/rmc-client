@@ -16,7 +16,7 @@ const Category = () => {
      
 
       <div className="text-center mt-10 mb-10">
-          <h3 className="text-3xl text-orange-700 font-bold">Our Top Categroy-02</h3>
+          <h3 className="text-3xl text-orange-700 font-bold">Our Top Categroy-0200</h3>
           
           <p>Most people like our food very much. Our food is very healthy.</p>
         </div>
