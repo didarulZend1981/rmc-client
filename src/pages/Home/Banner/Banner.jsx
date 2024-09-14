@@ -7,7 +7,9 @@ const Banner = () => {
     <div>
         <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative w-full h-[600px]">
-            <img src='https://i.ibb.co/YbX5S3G/3.jpg' className="w-full rounded-lg" />
+            <img src='https://i.ibb.co/wWWJbdB/shourav-sheikh-j9low-Ncnl04-unsplash.jpg' className="w-full rounded-lg" />
+            
+            
 
             <div className="absolute rounded-lg flex items-center h-full">
             <div className='text-white space-y-7 pl-12 w-1/2'>
