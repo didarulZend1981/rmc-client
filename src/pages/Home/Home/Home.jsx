@@ -12,7 +12,7 @@ const Home = () => {
     
       <Category></Category>
        <div className="text-center mt-20 mb-20">
-           <h2 className="text-5xl">Some Popular Food..25</h2>
+           <h2 className="text-5xl">Some Popular Food..250</h2>
           <p>Every day based on your needs I have displayed some of my food products in this restaurant so that<br/> you can buy food from this restaurant.</p>
         </div>
 
