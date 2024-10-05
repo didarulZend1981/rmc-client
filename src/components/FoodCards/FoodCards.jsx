@@ -13,7 +13,7 @@ const FoodCards = ({foodCard}) => {
 
   return (
     <div>
-        <div className="card card-side bg-base-100 shadow-xl border border-indigo-[white] h-[250px]">
+        <div className="card card-side bg-base-100 shadow-xl border border-indigo-[white] h-[300px]">
             <figure><img src={Food_Image} alt="Movie" className="rounded-lg border-2 h-[150px] w-[150px] p-[10px] ml-[20px]"/></figure>
             <div className="card-body">
             <h2 className="card-title">{Food_Name}</h2>
