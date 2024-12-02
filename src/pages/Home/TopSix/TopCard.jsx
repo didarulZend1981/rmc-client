@@ -33,14 +33,27 @@ const TopCard = ({catCard}) => {
     />
   </div>
 
-  <div className="absolute mx-auto left-0 right-0 -bottom-80 group-hover:bottom-2 bg-white w-11/12 p-3 rounded-lg transition-all duration-300">
-    <div className="text-center">
-      <h3 className="text-base font-bold text-gray-800">{Food_Name}</h3>
-      <h4 className="text-lg text-blue-600 font-bold mt-2">{price}</h4>
+  <div className="absolute mx-auto left-0 right-0 -bottom-80 group-hover:bottom-2 bg-white w-11/12 p-3 rounded-lg transition-all duration-300 uppercase">
+    <div className="flex justify-between text-center text-base font-bold text-gray-800">
+      <div className="flex justify-between">
+          <span>Name:</span><span className="text-blue-600">{Food_Name}</span>
+       </div>
+       <div className="flex justify-between">
+          <span>Price:</span><span className="text-blue-600">{price}$</span>
+       </div>
+       
+     
     </div>
-    <div className="text-center">
-      <h3 className="text-base font-bold text-gray-800">{Food_Category}</h3>
-      <h4 className="text-lg text-blue-600 font-bold mt-2">{sellingCount}</h4>
+
+
+    <div className="flex justify-between text-center text-lg font-bold">
+       <div className="flex justify-between">
+          <span>Category:</span><span className="text-blue-600">{Food_Category}</span>
+       </div>
+       <div className="flex justify-between">
+          <span>Sale:</span><span className="text-blue-600">{sellingCount}</span>
+       </div>
+      
     </div>
 
     <div className="flex justify-center">
