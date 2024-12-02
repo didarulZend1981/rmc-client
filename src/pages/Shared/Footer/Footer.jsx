@@ -6,7 +6,7 @@ const Footer = () => {
 
 
 
-         <footer className="bg-gray-100 text-stone-950 py-12 px-4 font-sans tracking-wide">
+         <footer className="bg-purple-300 text-stone-950 py-12 px-4 font-sans tracking-wide">
       <div className="text-center">
         <h6 className="text-base ">Stay connected with us:</h6>
 
