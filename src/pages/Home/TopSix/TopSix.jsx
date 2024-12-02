@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import TopCard from "./TopCard";
 import { Link } from "react-router-dom";
-
+import SectionTitle from "../../../components/SectionTitle";
 
 const TopSix = () => {
   const [topSix,setTopSix] =useState([]);
@@ -13,7 +13,11 @@ const TopSix = () => {
   return (
     <div>
       <div className="text-center mt-10 mb-10">
-          <h3 className="text-3xl text-orange-700 font-bold">Top Selling Food</h3>
+          
+          <SectionTitle 
+        mainHeader="Top Selling Food"
+        classNameMainHeader="text-3xl uppercase text-red-900 font-bold "
+         />
           
           
         </div>
@@ -41,8 +45,8 @@ const TopSix = () => {
           
         </div>
 
-        <div className="text-center mt-10 mb-10">
-          <h3 className="text-3xl text-sky-800 font-bold uppercase"><Link to="/allfood">MORE DETAILS PAGE CLIK HERE</Link></h3>
+        <div className="text-center mt-20 mb-20">
+          <h3 className="text-3xl text-red-900 font-bold uppercase"><Link to="/allfood">MORE DETAILS PAGE CLIK HERE</Link></h3>
           
           
         </div>

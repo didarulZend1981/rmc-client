@@ -33,8 +33,8 @@ const TopCard = ({catCard}) => {
     />
   </div>
 
-  <div className="absolute mx-auto left-0 right-0 -bottom-80 group-hover:bottom-2 bg-white w-11/12 p-3 rounded-lg transition-all duration-300 uppercase">
-    <div className="flex justify-between text-center text-base font-bold text-gray-800">
+  <div className="absolute mx-auto left-0 right-0 -bottom-80 group-hover:bottom-2 bg-white w-11/12 p-3 rounded-t-lg transition-all duration-300 uppercase">
+    <div className="flex justify-between text-center text-base font-thin text-gray-800 mt-2 mb-2">
       <div className="flex justify-between">
           <span>Name:</span><span className="text-blue-600">{Food_Name}</span>
        </div>
@@ -46,7 +46,7 @@ const TopCard = ({catCard}) => {
     </div>
 
 
-    <div className="flex justify-between text-center text-lg font-bold">
+    <div className="flex justify-between text-center text-base font-thin mt-2 mb-4">
        <div className="flex justify-between">
           <span>Category:</span><span className="text-blue-600">{Food_Category}</span>
        </div>

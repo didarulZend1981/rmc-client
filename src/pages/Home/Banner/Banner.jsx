@@ -16,7 +16,7 @@ const Banner = () => {
             <h2 className="text-3xl font-blod">Popular Food</h2>
             <p>This product is one of the products that have become popular in a very short time. We live among you by presenting new quality products every time. ...</p>
             <div>
-            <button className="btn btn-primary mr-5 rounded-full py-3 px-3"><Link to="/allfood">More</Link></button>
+            <button className="btn btn-primary mr-5 rounded-full py-3 px-10"><Link to="/allfood">More</Link></button>
             
 
 
@@ -45,7 +45,9 @@ const Banner = () => {
             <h2 className="text-3xl font-blod">BISHAKHI FOOD</h2>
             <p>This BISHAKHI is one of the products that have become popular in a very short time. We live among you by presenting new quality products every time. ...</p>
             <div>
-            <button className="btn btn-primary mr-5"><Link to="/allfood">More</Link></button>
+            <button className="btn btn-primary mr-5 rounded-full py-3 px-10"><Link to="/allfood">More</Link></button>
+              
+
              </div>
             </div>
 
@@ -66,7 +68,8 @@ const Banner = () => {
             <h2 className="text-3xl font-blod">Summer Food</h2>
             <p>Summer !! This product is one of the products that have become popular in a very short time. We live among you by presenting new quality products every time. ...</p>
             <div>
-            <button className="btn btn-primary mr-5"><Link to="/allfood">More</Link></button>
+            <button className="btn btn-primary mr-5 rounded-full py-3 px-10"><Link to="/allfood">More</Link></button>
+              
              </div>
             </div>
 
